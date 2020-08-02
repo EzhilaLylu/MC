@@ -3,6 +3,9 @@ package com.cognizant.mc.bankappws.accessor;
 import java.security.SecureRandom;
 import java.util.Random;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class Accessor {
 
 	private final Random RANDOM = new SecureRandom();
