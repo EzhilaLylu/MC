@@ -5,6 +5,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
+import com.cognizant.mc.bankappws.security.AppProperties;
+
 @SpringBootApplication
 public class BankAppWsApplication {
 
@@ -20,5 +22,10 @@ public class BankAppWsApplication {
 	@Bean
 	public SpringApplicationContext springApplicationContext() {
 		return new SpringApplicationContext();
+	}
+	
+	@Bean(name = "AppProperties")
+	public AppProperties appProperties() {
+		return new AppProperties();
 	}
 }
